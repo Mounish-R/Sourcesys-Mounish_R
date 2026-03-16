@@ -1,4 +1,5 @@
 import streamlit as st
+from pathlib import Path
 
 st.title("Streamlit App")
 
@@ -6,7 +7,10 @@ st.header("Welcome to My Page")
 
 st.write("My Name is MOUNISH R")
 
-st.image("assets/logo.jpg", caption="Sample Image")
+
+image_path = Path(__file__).parent / "assets" / "logo.jpg"
+
+st.image(image_path, caption="Sample Image")
 
 name = st.text_input("Enter your name")
 
