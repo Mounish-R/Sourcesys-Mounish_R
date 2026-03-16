@@ -6,7 +6,7 @@ st.header("Welcome to My Page")
 
 st.write("My Name is MOUNISH R")
 
-st.image("logo.jpg", caption="Sample Image")
+st.image("assest/logo.jpg", caption="Sample Image")
 
 name = st.text_input("Enter your name")
 
