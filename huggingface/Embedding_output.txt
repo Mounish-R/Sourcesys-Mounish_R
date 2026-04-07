@@ -1,0 +1,286 @@
+(venv) PS D:\Sourcesys-Mounish_R\huggingface> pip install sentence-transformers
+Collecting sentence-transformers
+  Downloading sentence_transformers-5.3.0-py3-none-any.whl.metadata (16 kB)
+Requirement already satisfied: transformers<6.0.0,>=4.41.0 in .\venv\Lib\site-packages (from sentence-transformers) (5.4.0)
+Requirement already satisfied: huggingface-hub>=0.20.0 in .\venv\Lib\site-packages (from sentence-transformers) (1.8.0)
+Requirement already satisfied: torch>=1.11.0 in .\venv\Lib\site-packages (from sentence-transformers) (2.11.0)
+Requirement already satisfied: numpy in .\venv\Lib\site-packages (from sentence-transformers) (2.4.4)
+Collecting scikit-learn (from sentence-transformers)
+  Using cached scikit_learn-1.8.0-cp314-cp314-win_amd64.whl.metadata (11 kB)
+Collecting scipy (from sentence-transformers)
+  Using cached scipy-1.17.1-cp314-cp314-win_amd64.whl.metadata (60 kB)
+Requirement already satisfied: typing_extensions>=4.5.0 in .\venv\Lib\site-packages (from sentence-transformers) (4.15.0)
+Requirement already satisfied: tqdm in .\venv\Lib\site-packages (from sentence-transformers) (4.67.3)
+Requirement already satisfied: packaging>=20.0 in .\venv\Lib\site-packages (from transformers<6.0.0,>=4.41.0->sentence-transformers) (26.0)    
+Requirement already satisfied: pyyaml>=5.1 in .\venv\Lib\site-packages (from transformers<6.0.0,>=4.41.0->sentence-transformers) (6.0.3)       
+Requirement already satisfied: regex>=2025.10.22 in .\venv\Lib\site-packages (from transformers<6.0.0,>=4.41.0->sentence-transformers) (2026.3.32)
+Requirement already satisfied: tokenizers<=0.23.0,>=0.22.0 in .\venv\Lib\site-packages (from transformers<6.0.0,>=4.41.0->sentence-transformers) (0.22.2)
+Requirement already satisfied: typer in .\venv\Lib\site-packages (from transformers<6.0.0,>=4.41.0->sentence-transformers) (0.24.1)
+Requirement already satisfied: safetensors>=0.4.3 in .\venv\Lib\site-packages (from transformers<6.0.0,>=4.41.0->sentence-transformers) (0.7.0)
+Requirement already satisfied: filelock>=3.10.0 in .\venv\Lib\site-packages (from huggingface-hub>=0.20.0->sentence-transformers) (3.25.2)
+Requirement already satisfied: fsspec>=2023.5.0 in .\venv\Lib\site-packages (from huggingface-hub>=0.20.0->sentence-transformers) (2026.3.0)
+Requirement already satisfied: hf-xet<2.0.0,>=1.4.2 in .\venv\Lib\site-packages (from huggingface-hub>=0.20.0->sentence-transformers) (1.4.3)  
+Requirement already satisfied: httpx<1,>=0.23.0 in .\venv\Lib\site-packages (from huggingface-hub>=0.20.0->sentence-transformers) (0.28.1)     
+Requirement already satisfied: anyio in .\venv\Lib\site-packages (from httpx<1,>=0.23.0->huggingface-hub>=0.20.0->sentence-transformers) (4.13.0)
+Requirement already satisfied: certifi in .\venv\Lib\site-packages (from httpx<1,>=0.23.0->huggingface-hub>=0.20.0->sentence-transformers) (2026.2.25)
+Requirement already satisfied: httpcore==1.* in .\venv\Lib\site-packages (from httpx<1,>=0.23.0->huggingface-hub>=0.20.0->sentence-transformers) (1.0.9)
+Requirement already satisfied: idna in .\venv\Lib\site-packages (from httpx<1,>=0.23.0->huggingface-hub>=0.20.0->sentence-transformers) (3.11) 
+Requirement already satisfied: h11>=0.16 in .\venv\Lib\site-packages (from httpcore==1.*->httpx<1,>=0.23.0->huggingface-hub>=0.20.0->sentence-transformers) (0.16.0)
+Requirement already satisfied: setuptools<82 in .\venv\Lib\site-packages (from torch>=1.11.0->sentence-transformers) (81.0.0)
+Requirement already satisfied: sympy>=1.13.3 in .\venv\Lib\site-packages (from torch>=1.11.0->sentence-transformers) (1.14.0)
+Requirement already satisfied: networkx>=2.5.1 in .\venv\Lib\site-packages (from torch>=1.11.0->sentence-transformers) (3.6.1)
+Requirement already satisfied: jinja2 in .\venv\Lib\site-packages (from torch>=1.11.0->sentence-transformers) (3.1.6)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in .\venv\Lib\site-packages (from sympy>=1.13.3->torch>=1.11.0->sentence-transformers) (1.3.0)
+Requirement already satisfied: colorama in .\venv\Lib\site-packages (from tqdm->sentence-transformers) (0.4.6)
+Requirement already satisfied: MarkupSafe>=2.0 in .\venv\Lib\site-packages (from jinja2->torch>=1.11.0->sentence-transformers) (3.0.3)
+Collecting joblib>=1.3.0 (from scikit-learn->sentence-transformers)
+  Using cached joblib-1.5.3-py3-none-any.whl.metadata (5.5 kB)
+Collecting threadpoolctl>=3.2.0 (from scikit-learn->sentence-transformers)
+  Using cached threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+Requirement already satisfied: click>=8.2.1 in .\venv\Lib\site-packages (from typer->transformers<6.0.0,>=4.41.0->sentence-transformers) (8.3.1)
+Requirement already satisfied: shellingham>=1.3.0 in .\venv\Lib\site-packages (from typer->transformers<6.0.0,>=4.41.0->sentence-transformers) (1.5.4)
+Requirement already satisfied: rich>=12.3.0 in .\venv\Lib\site-packages (from typer->transformers<6.0.0,>=4.41.0->sentence-transformers) (14.3.3)
+Requirement already satisfied: annotated-doc>=0.0.2 in .\venv\Lib\site-packages (from typer->transformers<6.0.0,>=4.41.0->sentence-transformers) (0.0.4)
+Requirement already satisfied: markdown-it-py>=2.2.0 in .\venv\Lib\site-packages (from rich>=12.3.0->typer->transformers<6.0.0,>=4.41.0->sentence-transformers) (4.0.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in .\venv\Lib\site-packages (from rich>=12.3.0->typer->transformers<6.0.0,>=4.41.0->sentence-transformers) (2.20.0)
+Requirement already satisfied: mdurl~=0.1 in .\venv\Lib\site-packages (from markdown-it-py>=2.2.0->rich>=12.3.0->typer->transformers<6.0.0,>=4.41.0->sentence-transformers) (0.1.2)
+Downloading sentence_transformers-5.3.0-py3-none-any.whl (512 kB)
+Using cached scikit_learn-1.8.0-cp314-cp314-win_amd64.whl (8.1 MB)
+Using cached joblib-1.5.3-py3-none-any.whl (309 kB)
+Using cached scipy-1.17.1-cp314-cp314-win_amd64.whl (37.3 MB)
+Using cached threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+Installing collected packages: threadpoolctl, scipy, joblib, scikit-learn, sentence-transformers
+Successfully installed joblib-1.5.3 scikit-learn-1.8.0 scipy-1.17.1 sentence-transformers-5.3.0 threadpoolctl-3.6.0                            
+(venv) PS D:\Sourcesys-Mounish_R\huggingface> pip install torch numpy
+Requirement already satisfied: torch in .\venv\Lib\site-packages (2.11.0)
+Requirement already satisfied: numpy in .\venv\Lib\site-packages (2.4.4)
+Requirement already satisfied: filelock in .\venv\Lib\site-packages (from torch) (3.25.2)
+Requirement already satisfied: typing-extensions>=4.10.0 in .\venv\Lib\site-packages (from torch) (4.15.0)
+Requirement already satisfied: setuptools<82 in .\venv\Lib\site-packages (from torch) (81.0.0)
+Requirement already satisfied: sympy>=1.13.3 in .\venv\Lib\site-packages (from torch) (1.14.0)
+Requirement already satisfied: networkx>=2.5.1 in .\venv\Lib\site-packages (from torch) (3.6.1)
+Requirement already satisfied: jinja2 in .\venv\Lib\site-packages (from torch) (3.1.6)
+Requirement already satisfied: fsspec>=0.8.5 in .\venv\Lib\site-packages (from torch) (2026.3.0)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in .\venv\Lib\site-packages (from sympy>=1.13.3->torch) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in .\venv\Lib\site-packages (from jinja2->torch) (3.0.3)
+(venv) PS D:\Sourcesys-Mounish_R\huggingface> python Embedding.py
+modules.json: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 349/349 [00:00<00:00, 435kB/s]
+D:\Sourcesys-Mounish_R\huggingface\venv\Lib\site-packages\huggingface_hub\file_download.py:129: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\rmoun\.cache\huggingface\hub\models--sentence-transformers--all-MiniLM-L6-v2. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+config_sentence_transformers.json: 100%|██████████████████████████████████████████████████████████████████████| 116/116 [00:00<00:00, 285kB/s]
+README.md: 10.5kB [00:00, 15.2MB/s]
+sentence_bert_config.json: 100%|████████████████████████████████████████████████████████████████████████████| 53.0/53.0 [00:00<00:00, 158kB/s]
+config.json: 100%|███████████████████████████████████████████████████████████████████████████████████████████| 612/612 [00:00<00:00, 1.47MB/s]
+model.safetensors: 100%|█████████████████████████████████████████████████████████████████████████████████| 90.9M/90.9M [01:01<00:00, 1.47MB/s]
+Loading weights: 100%|████████████████████████████████████████████████████████████████████████████████████| 103/103 [00:00<00:00, 3325.46it/s]
+BertModel LOAD REPORT from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  |
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  |
+
+Notes:
+- UNEXPECTED:   can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+tokenizer_config.json: 100%|██████████████████████████████████████████████████████████████████████████████████| 350/350 [00:00<00:00, 918kB/s]
+vocab.txt: 232kB [00:00, 2.00MB/s]
+tokenizer.json: 466kB [00:00, 3.77MB/s]
+special_tokens_map.json: 100%|████████████████████████████████████████████████████████████████████████████████| 112/112 [00:00<00:00, 312kB/s]
+config.json: 100%|████████████████████████████████████████████████████████████████████████████████████████████| 190/190 [00:00<00:00, 609kB/s]
+Embedding shape: (13, 384)
+
+Sample embeddings:
+ [[ 1.47381658e-02  5.60155064e-02 -7.10616633e-03 -6.00948930e-02
+   2.84971222e-02  3.30636986e-02  5.97959943e-02 -6.10680133e-03
+   5.84262125e-02  1.50097832e-01 -4.28374261e-02 -8.27852935e-02
+  -1.09672104e-03  8.07982087e-02  1.02339625e-01 -1.17131406e-02
+   2.41888911e-02 -5.69776483e-02  1.30850263e-02 -8.87584388e-02
+  -8.50176066e-02  1.28557101e-01  3.88330109e-02 -2.19953973e-02
+  -5.54530183e-03  3.11288610e-02  6.08596904e-03  3.76092158e-02
+  -5.90442084e-02 -5.01845852e-02 -4.74344119e-02  6.88913837e-02
+  -4.66459133e-02  4.69053760e-02 -7.84937441e-02 -3.79244462e-02
+  -3.47222462e-02  2.38856785e-02  4.85085361e-02  8.62311572e-03
+  -1.04958573e-02 -2.56468412e-02  4.73603234e-02  2.49594115e-02
+  -9.14415531e-03  8.55195299e-02  1.98661704e-02  6.26340369e-03
+   6.90868720e-02  2.40422618e-02  7.43924752e-02  3.71215567e-02
+  -6.71398768e-04  4.17280197e-02  9.73931849e-02 -7.55767450e-02
+  -3.62864807e-02 -1.11267017e-02  1.95073579e-02 -4.46369573e-02
+   5.11906110e-02  1.71644483e-02 -3.27186063e-02  3.15166824e-02
+  -1.96444988e-02 -3.59222777e-02 -3.93853225e-02  3.48012224e-02
+   3.14887837e-02  3.61240394e-02 -4.52048369e-02  3.06699965e-02
+   6.81196973e-02  7.11615309e-02  1.61901154e-02  5.23936041e-02
+   2.18583290e-02 -2.82375794e-02 -5.28862188e-03  2.13482864e-02
+   2.76594260e-03 -1.02900065e-01  9.71407536e-03  4.13523316e-02
+  -7.56901223e-03 -1.26845330e-01  8.05414654e-03  3.25584644e-03
+   3.87771870e-03 -3.62343714e-02 -3.92448604e-02  9.93381441e-03
+   2.92658224e-03  5.97039470e-03 -7.21811578e-02 -9.21142008e-03
+  -1.40571967e-02 -1.86378229e-02 -7.86279067e-02  4.64338325e-02
+  -6.95170835e-03 -8.36787559e-03 -2.58559417e-02  5.99375591e-02
+  -5.24772406e-02  4.10149880e-02 -2.41646767e-02  2.91997418e-02
+   8.67572501e-02 -3.23103331e-02 -6.15561660e-03  6.95513710e-02
+  -1.84766110e-02  3.91567796e-02 -3.02198362e-02  5.99785149e-02
+  -3.20937373e-02  2.32210550e-02 -4.30261679e-02  7.66992271e-02
+   9.72785614e-03  8.09017662e-03  5.30773029e-03 -5.16914986e-02
+   5.44848330e-02 -5.30881174e-02  5.29496819e-02 -4.51570673e-33
+  -8.09221715e-02 -5.19864783e-02 -2.04440728e-02 -2.40647662e-02
+  -3.00329998e-02 -3.75495758e-03  9.00970679e-03 -2.81984676e-02
+  -4.07791995e-02 -7.69151449e-02  1.14177307e-02  5.08058369e-02
+  -1.28818350e-02 -6.81866659e-03  4.09555100e-02 -2.47993506e-02
+  -4.64077331e-02  7.71551393e-03 -3.94243114e-02  2.90186480e-02
+  -1.23670036e-02 -1.51513470e-02  5.76079078e-02 -9.86209139e-03
+  -4.26568463e-02 -8.90963897e-03  1.08551525e-01 -1.18969582e-01
+   2.63732225e-02  3.69446538e-02  9.36963186e-02 -4.46835160e-02
+  -4.26361077e-02  1.49967838e-02 -5.10259829e-02 -6.23789094e-02
+  -2.43549701e-02 -8.45554546e-02  1.44248083e-02  4.88885008e-02
+   3.36914882e-02 -7.28582144e-02 -6.41746223e-02 -1.43392133e-02
+   3.62513214e-02 -1.74304917e-02 -5.11428863e-02  1.26974499e-02
+  -7.28741065e-02  4.53368528e-04  4.89284880e-02 -3.96486036e-02
+   1.07192948e-01 -1.50396395e-02  5.62309958e-02 -2.56735943e-02
+   2.32599806e-02 -3.68556641e-02 -5.92975281e-02 -2.21859217e-02
+  -6.28194958e-02 -9.86659061e-03  1.06574479e-03 -4.30826806e-02
+  -1.07981474e-03  6.17194101e-02  5.00329696e-02 -2.51957774e-02
+  -3.95530947e-02 -9.10683796e-02 -1.19204903e-02 -5.21271536e-03
+  -3.18658799e-02 -9.93489008e-03 -7.02901036e-02  3.92651446e-02
+   9.33201760e-02  2.50980202e-02  2.54285126e-03  1.71323605e-02
+  -5.36132865e-02  1.13864029e-02  1.98329519e-02 -1.19633526e-01
+   2.91657876e-02  5.07941749e-03 -8.05911720e-02 -1.72684625e-01
+   5.61335543e-03  1.49498088e-02 -1.03315614e-01 -9.47141051e-02
+   1.84008852e-02  5.52806705e-02 -2.02409737e-03  2.47590132e-33
+  -5.29362597e-02 -1.98334102e-02 -3.20515931e-02  5.27686626e-02
+   3.95629779e-02 -1.79611742e-02 -1.01424539e-02  4.18340927e-03
+  -4.22920734e-02  6.07176013e-02 -9.79202241e-03  1.36999935e-02
+  -6.21954724e-02  6.92259297e-02  9.84863471e-03  4.67253383e-04
+   2.13080384e-02  2.38256343e-02 -2.89281961e-02  3.31227258e-02
+   2.31955592e-02  4.05117571e-02 -1.03172250e-02 -2.96786726e-02
+  -2.34327186e-02  2.09182967e-02 -1.10699177e-01  2.51168553e-02
+  -1.15901493e-02  3.86834927e-02 -1.71762072e-02  7.72920623e-02
+   1.81816460e-03 -4.55885082e-02 -6.43932149e-02  9.26144198e-02
+   1.73008908e-02 -1.58860050e-02  4.58495738e-03  3.43420021e-02
+   2.83211265e-02  6.69635311e-02  6.62391726e-03  4.77121957e-02
+   4.05101404e-02 -5.91620728e-02  3.41115668e-02  7.00272545e-02
+  -4.87201326e-02 -1.41018778e-02 -2.34932043e-02  6.44732341e-02
+   5.05252779e-02 -1.05533585e-01  8.56580213e-02  5.66361211e-02
+   3.45587470e-02 -9.64543894e-02 -7.86993280e-02 -1.48780972e-01
+  -7.27128759e-02  5.19685000e-02 -4.79361787e-02  9.69829187e-02
+   5.00234291e-02  8.42118040e-02 -1.69948656e-02 -6.51301295e-02
+  -6.72740489e-02 -7.86411986e-02 -1.25082329e-01  2.33971756e-02
+  -8.57660770e-02  8.79859179e-03  2.22937837e-02  7.16886483e-04
+   5.31107485e-02  8.86481330e-02  4.15824205e-02  1.06852315e-01
+   7.89363286e-04  1.13143072e-01 -3.08921505e-02 -1.83528813e-03
+   3.08379885e-02  6.84812069e-02 -2.95963809e-02 -1.34567022e-02
+  -1.33240065e-02  2.65201274e-02  5.20604067e-02  7.05709904e-02
+  -5.10865124e-03 -3.21061052e-02  4.10997830e-02 -1.27781226e-08
+  -3.36208940e-03  1.61109343e-02  4.90433872e-02 -2.32678875e-02
+   1.99779663e-02 -1.58004481e-02  1.02126049e-02 -4.87941839e-02
+   3.90162915e-02 -2.15241145e-02  2.96271779e-02 -5.39789849e-04
+   1.45084299e-02  4.83025461e-02  1.08394578e-01 -1.71491075e-02
+   7.46419653e-02 -5.08837290e-02 -6.23343699e-02  7.15829656e-02
+  -1.33962473e-02 -3.99882235e-02  4.04295251e-02  6.41917437e-02
+  -3.14014517e-02 -3.62975039e-02 -6.53580427e-02 -7.96295926e-02
+   4.30813320e-02  1.87580064e-02  2.87501924e-02  4.66426648e-02
+   1.20055722e-02  3.75333205e-02 -3.53326164e-02 -1.52722299e-02
+   1.34835079e-01 -7.29333907e-02  4.90611345e-02 -2.58490592e-02
+  -4.77887169e-02  6.61258847e-02 -4.65540998e-02  2.55484544e-02
+  -6.38343766e-02  8.31825845e-03  1.09499525e-02 -7.01318383e-02
+  -7.13630468e-02 -4.95536812e-02 -2.62068808e-02 -2.94279912e-03
+   3.85681577e-02  3.04486752e-02  1.09484755e-02  7.78634623e-02
+  -9.61322561e-02 -4.18956839e-02 -2.23913547e-02  4.11771573e-02
+   1.10920988e-01  8.66291579e-03  6.94227591e-03 -1.97673608e-02]
+ [ 4.36513163e-02 -2.31257509e-04  5.80876954e-02  5.33110974e-03
+   4.40620035e-02 -1.83605812e-02  1.03691593e-01 -1.89403333e-02
+   1.39941480e-02  8.52303952e-02 -8.84495601e-02 -2.57556699e-02
+  -6.11919947e-02  6.51837736e-02  1.27441362e-01  6.04965491e-03
+   3.00779883e-02  2.55586151e-02 -1.83635466e-02 -6.41970485e-02
+  -1.30446047e-01  4.03089151e-02 -2.87411716e-02 -2.51917932e-02
+  -6.64218068e-02  1.54627701e-02 -4.44685295e-02  1.05979018e-01
+  -3.43254465e-03 -3.19102667e-02 -7.02767894e-02  1.52774258e-02
+   7.88701419e-03  5.52478386e-03 -2.22518691e-03  7.83421397e-02
+  -2.25291611e-03 -9.81669798e-02 -1.49489241e-02  4.95499372e-02
+  -1.19416332e-02  1.43735567e-02  3.38882171e-02  1.71311460e-02
+   7.91822653e-03 -5.69210714e-03 -3.18815857e-02  1.16392234e-02
+   9.72067639e-02  4.46314961e-02  1.37830272e-01  4.85363044e-02
+   9.58134071e-04  8.54208227e-03 -3.32164764e-02  1.08754560e-02
+  -3.62747200e-02 -7.83207081e-03  2.53777159e-03 -3.70325968e-02
+   9.52773392e-02  6.92650722e-03 -1.09439626e-01  1.23849772e-02
+  -3.19749340e-02 -8.82529933e-03 -2.38189101e-02  6.41679093e-02
+   3.41006257e-02 -7.77291507e-02 -3.38077210e-02  7.24582374e-02
+   2.07346631e-03 -3.45700495e-02 -3.05924285e-02  7.92358518e-02
+  -5.19253388e-02 -6.30947724e-02 -1.87452771e-02 -4.59210528e-03
+   4.87304851e-02 -4.02086861e-02  3.25199701e-02 -4.39487584e-02
+   3.61783034e-03 -4.60246280e-02  5.46582218e-04  6.94514439e-02
+   4.62720022e-02  2.07768362e-02 -8.31796378e-02 -3.44872773e-02
+  -3.67323272e-02  8.53508785e-02 -8.75780582e-02  2.51230914e-02
+   9.92821064e-03 -2.44329050e-02 -4.33954485e-02  9.58028510e-02
+   3.14068571e-02  2.81326789e-02 -7.41191860e-03  7.94223994e-02
+   3.87321822e-02  7.35142007e-02 -9.07932073e-02  5.11706844e-02
+   1.83247793e-02  3.94447707e-02 -3.76284756e-02  1.73071828e-02
+  -3.40184430e-03  2.33271960e-02 -6.57160729e-02  4.55984287e-02
+   4.23947573e-02  7.39005283e-02 -1.21642528e-02  2.17300672e-02
+   2.03023292e-02  5.53561039e-02  3.12113054e-02  8.10585991e-02
+   4.73307259e-02 -2.72883084e-02  9.29907262e-02 -4.90454888e-33
+  -2.69900588e-03 -6.89937100e-02  2.46112589e-02  1.44482674e-02
+   3.96593772e-02  3.91793959e-02  5.89773245e-02 -6.13680780e-02
+  -7.75137693e-02 -7.72810960e-03 -3.63317616e-02  8.69150683e-02
+  -6.03022613e-02  1.31619526e-02  1.52764827e-01 -5.25888540e-02
+  -1.47891287e-02 -4.50677052e-03 -7.57968286e-03  2.21482143e-02
+  -2.83767805e-02 -1.18869580e-01  3.01869214e-02  9.09689665e-02
+  -2.02905368e-02 -6.05667941e-03  3.48796919e-02 -5.33311702e-02
+   3.30896340e-02  2.77064145e-02  8.33555087e-02 -4.83237505e-02
+  -1.16319247e-01  2.73177121e-03  6.61035404e-02 -8.12997855e-03
+  -2.84855366e-02 -1.41891069e-03  2.74787862e-02  4.43439595e-02
+  -2.45744865e-02 -4.67280932e-02 -3.15367021e-02 -2.36385819e-02
+   6.31146431e-02 -5.22162542e-02  7.99511895e-02 -2.17448175e-02
+  -1.06856748e-01 -7.33665228e-02 -4.27637361e-02  7.64307659e-03
+   1.64789252e-03 -4.89808037e-04 -6.48353714e-03 -4.57089841e-02
+   6.93217367e-02 -1.72347054e-02 -5.63465543e-02 -3.89604922e-03
+  -2.86340881e-02  7.27192014e-02 -2.23488174e-03 -3.97852473e-02
+  -5.66864386e-02  5.74260913e-02  5.43755442e-02  3.81619781e-02
+  -3.73934545e-02 -2.86555737e-02  6.13017343e-02  5.76835945e-02
+   1.04064859e-01 -1.93755105e-02 -1.75403059e-03  2.13072193e-03
+   3.14516351e-02 -1.37584778e-02 -3.87831517e-02 -2.69054677e-02
+  -4.69399197e-03 -6.85860822e-03 -9.81767923e-02 -2.63074860e-02
+  -1.36454562e-02  9.52901505e-03 -3.63881774e-02 -8.48332196e-02
+   1.03230290e-02  2.17229989e-03 -7.82345086e-02  6.61782082e-03
+  -3.68834473e-02  2.96910815e-02 -9.29073766e-02  3.61638155e-33
+  -1.53921125e-02 -7.99633265e-02  1.24164028e-02 -7.18545690e-02
+  -3.23121063e-02 -2.68533789e-02 -4.88565974e-02  3.00304759e-02
+   1.48636000e-02  7.94712603e-02 -4.88533415e-02  1.03610769e-01
+   5.62843867e-03  9.02366862e-02  6.98369788e-03 -6.70451298e-02
+  -2.89109927e-02  8.26212838e-02 -1.60233676e-02 -2.00766847e-02
+   3.69347110e-02  6.62286952e-02 -7.24810176e-03  5.29251015e-03
+   1.59553681e-02  1.47520900e-02 -1.24871898e-02 -1.46712242e-02
+  -3.76669019e-02  1.05334401e-01  3.79703753e-02  8.32418650e-02
+   3.01618921e-03 -8.18190351e-02 -1.21018244e-02  3.10541317e-02
+   1.91830974e-02 -3.27188335e-02 -1.30916210e-02 -3.21254283e-02
+  -1.50501905e-02  2.07231250e-02  2.42238566e-02  4.68261465e-02
+   3.70036531e-03  6.70583919e-02  1.41561881e-03  2.78441492e-03
+  -2.15767827e-02  9.16233473e-03 -1.44513631e-02  4.74344753e-02
+  -9.10056904e-02 -5.16560152e-02  3.25601324e-02 -3.93270850e-02
+  -4.62292172e-02 -4.48393375e-02 -9.53429714e-02 -4.80720475e-02
+   1.80640798e-02  6.51347041e-02 -7.98453093e-02  1.33556157e-01
+   5.19564822e-02  2.98613347e-02 -4.15840000e-02 -5.03330454e-02
+  -4.43436168e-02 -5.17760143e-02 -1.42802715e-01  3.34067307e-02
+  -1.10633962e-01 -2.64216810e-02 -2.82307249e-02 -2.45403871e-02
+   2.17562243e-02  1.35806069e-01  5.37410472e-03  8.19314867e-02
+  -1.21761402e-02  4.40992638e-02 -1.40330996e-02  2.68322602e-02
+   2.38523241e-02 -1.27193881e-02 -3.83922011e-02 -1.35650039e-02
+  -5.85852228e-02 -4.51025143e-02  1.10619560e-01  9.66554135e-02
+  -2.07924955e-02  6.53509749e-03  3.00989929e-03 -1.31038203e-08
+  -1.31708654e-02  7.14376271e-02  3.34200375e-02 -6.06041588e-02
+  -9.69677325e-03 -6.18963735e-03 -1.48838572e-02 -4.83378331e-04
+   2.09263116e-02 -7.88029581e-02  2.50134598e-02 -6.89984113e-03
+   5.28870486e-02  3.70023884e-02  1.12180248e-01 -7.19998823e-03
+   5.20183295e-02 -5.88915497e-02 -3.48671041e-02  1.11609049e-01
+   3.79447713e-02  9.74064786e-03 -2.21722946e-02  1.98667254e-02
+  -3.36439125e-02 -1.55149139e-02  1.08890971e-02 -8.88523459e-02
+   8.11776370e-02  4.57533598e-02  6.25955090e-02  5.25836088e-02
+   1.13828648e-02 -1.30123086e-03  4.86170165e-02 -3.77940238e-02
+   3.72064337e-02 -3.73755693e-02 -6.78594932e-02 -3.89456637e-02
+  -9.21378136e-02 -5.21517433e-02 -3.88559178e-02 -2.41983738e-02
+  -2.45759692e-02  3.82670462e-02  2.77945530e-02 -1.06427036e-02
+  -3.73264439e-02 -2.75479257e-02 -4.00647558e-02 -1.26773557e-02
+   2.95101143e-02 -1.29789226e-02  5.58573902e-02  3.85858342e-02
+  -5.01699671e-02  6.44054962e-03  3.10870800e-02 -1.27148861e-02
+  -8.04118346e-03 -1.73495077e-02 -1.07053995e-01 -6.58783922e-03]]
+
+Similarity between first two sentences: 0.4992084205150604
+(venv) PS D:\Sourcesys-Mounish_R\huggingface>
