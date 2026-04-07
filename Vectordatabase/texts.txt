@@ -1,0 +1,4 @@
+AI is the future
+Data science uses Python
+Neural networks are part of deep learning
+FAISS is used for vector search
